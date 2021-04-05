@@ -15,12 +15,16 @@ export class ContaCorrente extends Conta {
             this._saldo-=valor;
             return valor;
         }else{
-            console.log("erro ao sacar _saldo inferior ao pedido, gostaria de fazer um empréstmo?");
+            return 0;
         }
     }
     deposita(valor){
         if (valor>0){
-            this._saldo+=valor
+            this._saldo=valor+this._saldo
         }
+    }
+    transferir(valor, conta){
+    const valorSacado = this.sacar(valor);
+    conta.deposita(valor);
     }
 }
