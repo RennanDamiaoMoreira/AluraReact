@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-export class formularioCadastro extends Component {
+class FormularioCadastro extends Component {
   render() {
     return (
       <form>
-        <input type="text" placeholder="título" />
-        <textarea placeholder="insira sua nota" />
+        <input type="text" placeholder="titulo"></input>
+        <textarea name="" placeholder="insira sua nota aqui"></textarea>
         <button type="submit">enviar</button>
       </form>
     );
   }
 }
+export default FormularioCadastro;
