@@ -1,6 +1,4 @@
 class Cliente{
     nome;
     cpf;
-    
-
 }
