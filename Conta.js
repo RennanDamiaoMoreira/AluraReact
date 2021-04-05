@@ -1,0 +1,4 @@
+class ContaCorrente{
+    agencia;
+    saldo;
+}
