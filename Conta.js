@@ -3,9 +3,14 @@ class ContaCorrente{
     saldo;
     sacar(valor){
         if (valor<=this.saldo){
-            this.saldo=this.saldo-valor;
+            this.saldo-=valor;
         }else{
             console.log("erro ao sacar saldo inferior ao pedido, gostaria de fazer um empréstmo?");
+        }
+    }
+    deposita(valor){
+        if (valor>0){
+            this.saldo+=valor
         }
     }
 }
