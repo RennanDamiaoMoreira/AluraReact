@@ -7,16 +7,7 @@ function App() {
         <textarea placeholder="insira sua nota" />
         <button type="submit">enviar</button>
       </form>
-      <ul>
-        <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>escreva sua nota</p>
-          </section>
-        </li>
-      </ul>
+      <ListaDeNotas/>
     </div>
   );
 }
