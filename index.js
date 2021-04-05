@@ -6,3 +6,7 @@ cliente1.cpf= "11122233300";
 const conta = new ContaCorrente();
 conta.deposita(10);
 console.log(cliente1,conta)
+conta.sacar(4);
+console.log(cliente1,conta)
+conta.deposita(101);
+console.log(cliente1,conta)
