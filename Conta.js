@@ -1,4 +1,13 @@
-export class ContaCorrente{
+class Conta {
+    cliente;
+}
+export class ContaCorrente extends Conta {
+    constructor(agencia,saldo, cliente){
+        super();
+        super.cliente=cliente;
+        this.agencia=agencia;
+        this._saldo=saldo;
+    }
     agencia;
     _saldo = 0;
     sacar(valor){
