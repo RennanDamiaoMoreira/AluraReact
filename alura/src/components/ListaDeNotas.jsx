@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class ListaDeNotas extends Component {
+export class ListaDeNotas extends Component {
   render() {
     return (
       <ul>
