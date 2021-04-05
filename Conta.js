@@ -1,6 +1,6 @@
 class ContaCorrente{
-    agencia;
-    saldo;
+    #agencia;
+    #saldo;
     sacar(valor){
         if (valor<=this.saldo){
             this.saldo-=valor;
@@ -17,6 +17,6 @@ class ContaCorrente{
 const conta1 = new ContaCorrente();
 conta1.saldo=1;
 conta1.sacar(10);
-conta1.saldo=10;
+conta1.saldo=1
 conta1.sacar(2);
 console.log(conta1.saldo)
