@@ -1,6 +1,6 @@
-class ContaCorrente{
+export class ContaCorrente{
     agencia;
-    _saldo;
+    _saldo = 0;
     sacar(valor){
         if (valor<=this._saldo){
             this._saldo-=valor;
@@ -15,9 +15,3 @@ class ContaCorrente{
         }
     }
 }
-const conta1 = new ContaCorrente();
-conta1._saldo=1;
-conta1.sacar(10);
-conta1._saldo=10;
-conta1.sacar(2);
-console.log(conta1._saldo)
