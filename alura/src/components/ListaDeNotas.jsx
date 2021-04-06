@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import CardNotas from "./CardNota/CardNotas";
 
 class ListaDeNotas extends Component {
-  
+  excluirNota(texto){
+    console.log(texto);
+  }
   render() {
     
     return (
@@ -10,7 +12,7 @@ class ListaDeNotas extends Component {
         {this.props.notas.map((nota,index) => {
           return (
             <li key={index}  className="col s12 l4">
-              <CardNotas titulo={nota.titulo} texto={nota.texto} />
+              <CardNotas titulo={nota.titulo} texto={nota.texto} index={index} />
             </li>
           );
         })}
