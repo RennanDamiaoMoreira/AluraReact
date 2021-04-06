@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../css/materialize.css"
 class FormularioCadastro extends Component {
-  titulo;
-  constructor (){
-    super();
+ 
+  constructor (props){
+    super(props);
     this.titulo="";
     this.nota="";
   }
@@ -19,6 +19,7 @@ class FormularioCadastro extends Component {
   criarNota(evento){
     evento.preventDefault();
     evento.stopPropagation();
+    this.props.criarNota(this.titulo,this.nota);
    
   }
   render() {
