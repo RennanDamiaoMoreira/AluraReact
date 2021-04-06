@@ -24,7 +24,7 @@ class FormularioCadastro extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.criarNota.bind(this)}>
+      <form  onSubmit={this.criarNota.bind(this)}>
         <input type="text" placeholder="titulo"  onChange={this.handleMudancaTitulo.bind(this)}></input>
         <textarea name="" placeholder="insira sua nota aqui"  onChange={this.handleMudancaNota.bind(this)}></textarea>
         <button className="btn " type="submit" >enviar</button>
