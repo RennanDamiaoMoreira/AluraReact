@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 import "../../css/materialize.css";
-class CardNotas extends Component {
-  constructor(){
-    super();
-    this.handler = this.handler.bind(this);
-  }
-  excluirNota(evento){
-    evento.preventDefault();
-    evento.stopPropagation()
-    this.props.excluirNota("this.props.bind(this.props.index)");
 
-  }
+class CardNotas extends Component {
+  
+  
   render() {
     return (
       <div>
@@ -25,7 +18,7 @@ class CardNotas extends Component {
             </p>
             <div class="card-action">
           
-          <button className="btn red" onClick={this.excluirNota.bind(this)}>Excluir</button>
+          <button className="btn red" onClick={excluirNota(this.props.index)}>Excluir</button>
         </div>
           </div>
         </div>
