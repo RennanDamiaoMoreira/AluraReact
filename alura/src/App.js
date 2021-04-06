@@ -18,6 +18,11 @@ class App extends Component {
    this.setState(novoEstado)
   
   }
+  excluirNotas(posicao){
+    const novoArrayNotas=[...this.state.notas.splice(posicao)];
+    const novoEstado ={notas:novoArrayNotas};
+    this.setState(novoEstado);
+  }
   render() {
     return (
       <section className="container">
