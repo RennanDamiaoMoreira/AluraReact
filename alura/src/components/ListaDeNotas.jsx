@@ -4,6 +4,7 @@ import CardNotas from "./CardNota/CardNotas";
 class ListaDeNotas extends Component {
   
   render() {
+    
     return (
       <ul className="">
         {this.props.notas.map((nota,index) => {
