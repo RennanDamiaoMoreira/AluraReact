@@ -17,7 +17,9 @@ class FormularioCadastro extends Component {
    
   }
   criarNota(evento){
-   alert("novo card criado")
+    evento.preventDefault();
+    evento.stopPropagation();
+   
   }
   render() {
     return (
