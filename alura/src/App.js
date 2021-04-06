@@ -3,12 +3,20 @@ import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/fomularioCadastro";
 import "./css/materialize.css";
 class App extends Component {
+  constructor(){
+    super();
+    this.notas=[];
+  }
+  criarNota(titulo,texto){
+   const novaNota = {titulo,texto};
+   this.notas.push(novaNota);
+  }
   render() {
     return (
       <section className="container">
         <div className="row">
-          <div className="col s12 l4"><FormularioCadastro></FormularioCadastro></div>
-          <div className="col s12 l8"><ListaDeNotas></ListaDeNotas></div>
+          <div className="col s12 l4"><FormularioCadastro criarNota={this.criarNota}></FormularioCadastro></div>
+          <div className="col s12 l8"><ListaDeNotas notas={this.notas}></ListaDeNotas></div>
         </div>
         
         
