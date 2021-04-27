@@ -19,7 +19,7 @@ class CardNotas extends Component {
             </p>
             <div class="card-action">
           
-          <button className="btn red" onClick={this.props.deletarNota} ><DeleteSVG/></button>
+          <button className="btn red" onClick={this.props.apagarNota} ><DeleteSVG/></button>
         </div>
           </div>
         </div>
