@@ -3,7 +3,9 @@ import "../../css/materialize.css";
 import {ReactComponent as DeleteSVG} from "../../assets/delete.svg";
 
 class CardNotas extends Component {
-  
+  apagar(){
+    this.props.apagarNota(this.props.index);
+  }
   
   render() {
     return (
@@ -19,7 +21,7 @@ class CardNotas extends Component {
             </p>
             <div class="card-action">
           
-          <button className="btn red" onClick={this.props.apagarNota} ><DeleteSVG/></button>
+          <button className="btn red" onClick={this.apagar.bind(this)} ><DeleteSVG/></button>
         </div>
           </div>
         </div>
