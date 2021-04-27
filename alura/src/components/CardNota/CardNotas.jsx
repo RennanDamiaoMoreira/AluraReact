@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../css/materialize.css";
+import {ReactComponent as DeleteSVG} from "../../assets/delete.svg";
 
 class CardNotas extends Component {
   
@@ -13,12 +14,12 @@ class CardNotas extends Component {
             <p>
               {this.props.texto}
               <br/>
-              {this.props.index}
+              
 
             </p>
             <div class="card-action">
           
-          <button className="btn red" onClick={excluirNota(this.props.index)}>Excluir</button>
+          <button className="btn red" onClick={this.props.deletarNota} ><DeleteSVG/></button>
         </div>
           </div>
         </div>
