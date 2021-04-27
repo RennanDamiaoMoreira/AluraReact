@@ -18,11 +18,11 @@ class App extends Component {
    this.setState(novoEstado)
   
   }
-  deletarNota(){
+  deletarNota(index){
     let arrayNotas = this.state.notas;
-    var index=arrayNotas.find(arrayNotas);
-    arrayNotas.splice(0,1);
-    console.log(index);
+   
+    arrayNotas.splice(index,1);
+    
     this.setState({notas:arrayNotas});
   }
   render() {
