@@ -19,7 +19,11 @@ class App extends Component {
   
   }
   deletarNota(){
-    console.log("exterminar")
+    let arrayNotas = this.state.notas;
+    var index=arrayNotas.find(arrayNotas);
+    arrayNotas.splice(0,1);
+    console.log(index);
+    this.setState({notas:arrayNotas});
   }
   render() {
     return (
@@ -31,7 +35,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col s12 l4"><FormularioCadastro criarNota={this.criarNota.bind(this)}></FormularioCadastro></div>
-          <div className="col s12 l8"><ListaDeNotas apagarNotas={this.deletarNota.bind(this)} notas={this.state.notas}></ListaDeNotas></div>
+          <div className="col s12 l8"><ListaDeNotas apagarNota={this.deletarNota.bind(this)} notas={this.state.notas}></ListaDeNotas></div>
         </div>
         
         
