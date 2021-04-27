@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import CardNotas from "./CardNota/CardNotas";
 
 class ListaDeNotas extends Component {
-  excluirNota(texto){
-    console.log(texto);
-  }
+ 
   render() {
     
     return (
