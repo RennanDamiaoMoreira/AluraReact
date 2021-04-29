@@ -8,6 +8,7 @@ class App extends Component {
     super();
     this.state = {
       notas: [],
+      categoria:[],
     };
   }
   criarNota(titulo, texto) {
