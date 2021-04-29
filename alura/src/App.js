@@ -2,28 +2,27 @@ import React, { Component } from "react";
 import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/fomularioCadastro";
 import "./css/materialize.css";
+import ListaDeCategorias from "./components/ListaDeCategorias/ListaDeCategorias";
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state={
-      notas:[]
-    }
-    
+    this.state = {
+      notas: [],
+    };
   }
-  criarNota(titulo,texto){
-   const novaNota = {titulo,texto};
-   const novoArrayNotas = [...this.state.notas,novaNota];
-   const novoEstado={notas:novoArrayNotas}
-  
-   this.setState(novoEstado)
-  
+  criarNota(titulo, texto) {
+    const novaNota = { titulo, texto };
+    const novoArrayNotas = [...this.state.notas, novaNota];
+    const novoEstado = { notas: novoArrayNotas };
+
+    this.setState(novoEstado);
   }
-  deletarNota(index){
+  deletarNota(index) {
     let arrayNotas = this.state.notas;
-   
-    arrayNotas.splice(index,1);
-    
-    this.setState({notas:arrayNotas});
+
+    arrayNotas.splice(index, 1);
+
+    this.setState({ notas: arrayNotas });
   }
   render() {
     return (
@@ -34,12 +33,25 @@ class App extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col s12 l4"><FormularioCadastro criarNota={this.criarNota.bind(this)}></FormularioCadastro></div>
-          <div className="col s12 l8"><ListaDeNotas apagarNota={this.deletarNota.bind(this)} notas={this.state.notas}></ListaDeNotas></div>
+          <div className="col s12 l4">
+            <FormularioCadastro
+              criarNota={this.criarNota.bind(this)}
+            ></FormularioCadastro>
+          </div>
+          <main>
+            <div className="col s12 l8">
+              <div className="row">
+                <ListaDeCategorias />
+              </div>
+              <div className="row">
+                <ListaDeNotas
+                  apagarNota={this.deletarNota.bind(this)}
+                  notas={this.state.notas}
+                ></ListaDeNotas>
+              </div>
+            </div>
+          </main>
         </div>
-        
-        
-        
       </section>
     );
   }
